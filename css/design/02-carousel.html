@@ -39,11 +39,11 @@
         width: 800px;
         margin: 100px auto;
         border-radius: 8px;
-        padding: 32px;
-        padding-left: 86px;
+        padding: 32px 48px 32px 86px;
         display: flex;
         align-items: center;
         gap: 86px;
+        position: relative;
       }
       .testimonial-text {
         font-size: 18px;
@@ -61,6 +61,65 @@
         font-size: 12px;
         color: #c3fae8;
       }
+
+      /* CONTROLs */
+      .btn {
+        background-color: #fff;
+        border: none;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .btn--left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .btn--right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+      .btn {
+        fill: #087f5b;
+        width: 34px;
+        height: 34px;
+        padding: 5px;
+      }
+
+      /* dots */
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 32px);
+        bottom: 0;
+
+        display: flex;
+        gap: 12px;
+      }
+
+      .dot {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+      }
+
+      .dot--fill {
+        background-color: #087f5b;
+      }
     </style>
   </head>
   <body>
@@ -72,20 +131,17 @@
       <blockquote class="testimonial">
         <p class="testimonial-text">
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-          nisi, rem dolores perferendis quibusdam, maxime earum sint tenetur
-          odit commodi autem quaerat? Accusantium, aut esse?"
+          nisi, rem dolores perferendis quibusdam, maxime earum sint"
         </p>
         <p class="testimonial-author">Maria de Almedia</p>
         <p class="job">Senior Product Manager at ADP Commercial</p>
       </blockquote>
 
       <!-- button -->
-      <button class="btn">
+      <button class="btn btn--left">
         <svg
+          class="btn-icon"
           xmlns="http://www.w3.org/2000/svg"
-          width="10"
-          height="10"
-          fill="#000000"
           viewBox="0 0 256 256"
         >
           <path
@@ -93,12 +149,10 @@
           ></path>
         </svg>
       </button>
-      <button class="btn">
+      <button class="btn btn--right">
         <svg
+          class="btn-icon"
           xmlns="http://www.w3.org/2000/svg"
-          width="10"
-          height="10"
-          fill="#000000"
           viewBox="0 0 256 256"
         >
           <path
@@ -106,6 +160,12 @@
           ></path>
         </svg>
       </button>
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
     </div>
   </body>
 </html>

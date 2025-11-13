@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carosel Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* 
+      Main Color : #087f5b
+      Grey Color : #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 4px;
+        transform: scale(1.5);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      .carousel {
+        background-color: #087f5b;
+        width: 800px;
+        margin: 100px auto;
+        border-radius: 8px;
+        padding: 32px;
+        padding-left: 86px;
+        display: flex;
+        align-items: center;
+        gap: 86px;
+      }
+      .testimonial-text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        color: #e6fcf5;
+      }
+      .testimonial-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #c3fae8;
+      }
+      .job {
+        font-size: 12px;
+        color: #c3fae8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img
+        src="https://github.com/jonasschmedtmann/html-css-course/blob/master/starter/06-Components/maria.jpg?raw=true"
+        alt="Maria"
+      />
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          nisi, rem dolores perferendis quibusdam, maxime earum sint tenetur
+          odit commodi autem quaerat? Accusantium, aut esse?"
+        </p>
+        <p class="testimonial-author">Maria de Almedia</p>
+        <p class="job">Senior Product Manager at ADP Commercial</p>
+      </blockquote>
+
+      <!-- button -->
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"
+          ></path>
+        </svg>
+      </button>
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>

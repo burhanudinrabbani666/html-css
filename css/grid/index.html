@@ -6,89 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Grid</title>
     <style>
-      .el--1 {
-        background-color: blueviolet;
+      .container {
+        width: 790px;
+        font-family: sans-serif;
+        font-size: 14px;
+        border: 1px solid black;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row: 2;
       }
-      .el--2 {
-        background-color: orangered;
+
+      .head {
+        grid-row: 1;
+        grid-column: 1/ -1;
+
+        background-color: rgb(231, 231, 231);
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
       }
-      .el--3 {
+
+      .image {
         background-color: green;
-        /* height: 150px; */
       }
-      .el--4 {
-        background-color: goldenrod;
+
+      .price__container,
+      .details {
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 30px;
       }
-      .el--5 {
-        background-color: palevioletred;
+
+      .price__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
-      .el--6 {
-        background-color: steelblue;
+
+      .price__tag {
+        font-size: 20px;
+        font-weight: bold;
       }
-      .el--7 {
+
+      .free-shiping {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .price__container a {
+        color: black;
+      }
+
+      .color {
+        display: flex;
+        gap: 6px;
+      }
+
+      .color__1,
+      .color__2,
+      .color__3,
+      .color__4,
+      .color__5,
+      .color__6 {
+        width: 24px;
+        height: 24px;
+      }
+
+      .color__1 {
+        background-color: black;
+      }
+
+      .color__2 {
+        background-color: blue;
+      }
+      .color__3 {
+        background-color: red;
+      }
+      .color__4 {
         background-color: yellow;
       }
-      .el--8 {
-        background-color: crimson;
+      .color__5 {
+        background-color: greenyellow;
+      }
+      .color__6 {
+        background-color: brown;
       }
 
-      .container--1 {
-        /* STARTER */
-        font-family: sans-serif;
-        background-color: #ddd;
-        font-size: 40px;
-        margin: 40px;
-
-        /* CSS GRID */
-        display: grid;
-        /* grid-template-rows: 300px 200px; */
-
-        /* How Many columns: 4, what Size columns: 1fr */
-        grid-template-columns: repeat(4, 1fr);
-
-        /* How Many rows: 4, what Size rows: 1fr */
-        grid-template-rows: repeat(2, 1fr);
-
-        /* gap: 10px; */
-        column-gap: 10px;
-        row-gap: 40px;
+      .details__head {
+        font-weight: bold;
       }
 
-      .container--2 {
-        display: none;
+      .details ul li {
+        margin-bottom: 10px;
+        margin-left: -25px;
+      }
 
-        /* STARTER */
-        font-family: sans-serif;
+      .cta {
         background-color: black;
-        font-size: 40px;
-        margin: 100px;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        grid-column: 1 /-1;
+      }
 
-        width: 1000px;
-        height: 600px;
-
-        /* CSS GRID */
+      .cta a {
+        text-decoration: none;
+        color: white;
       }
     </style>
   </head>
   <body>
-    <div class="container--1">
-      <div class="el el--1">(1) HTML</div>
-      <div class="el el--2">(2) and</div>
-      <div class="el el--3">(3) CSS</div>
-      <div class="el el--4">(4) are</div>
-      <div class="el el--5">(5) amazing</div>
-      <div class="el el--6">(6) languages</div>
-      <div class="el el--7">(7) to</div>
-      <div class="el el--8">(8) learn</div>
-    </div>
-
-    <div class="container--2">
-      <div class="el el--1">(1)</div>
-      <div class="el el--3">(3)</div>
-      <div class="el el--4">(4)</div>
-      <div class="el el--5">(5)</div>
-      <div class="el el--6">(6)</div>
-      <div class="el el--7">(7)</div>
-    </div>
+    <main class="container">
+      <div class="image"></div>
+      <section class="head">
+        <span>CONVERSE CHUCK TAYLOR ALL STAR LOW TOP</span>
+      </section>
+      <section class="price__container">
+        <div class="price__head">
+          <span class="price__tag">$65.00</span>
+          <span class="free-shiping">free shiping</span>
+        </div>
+        <p class="product-description">
+          Ready to drees up and down, these clasic canvas chucks are an everyday
+          wardrobe staple
+        </p>
+        <a href="#"> More information &longrightarrow;</a>
+        <div class="color">
+          <div class="color__1"></div>
+          <div class="color__2"></div>
+          <div class="color__3"></div>
+          <div class="color__4"></div>
+          <div class="color__5"></div>
+          <div class="color__6"></div>
+        </div>
+      </section>
+      <section class="details">
+        <span class="details__head">PRODUCT DETAILS</span>
+        <ul class="details__list">
+          <li>Lightweight,durable canvas sneaker</li>
+          <li>Light padded footbed for add comfort</li>
+          <li>Iconic Chuck taylor ankle patch</li>
+        </ul>
+      </section>
+      <footer class="cta">
+        <a href="">add to cart</a>
+      </footer>
+    </main>
   </body>
 </html>

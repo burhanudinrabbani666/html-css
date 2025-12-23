@@ -25,10 +25,21 @@
 - in two dimensional contexts, CSS grid allows us to write less nested html and easier to rid css
 - css grid is not meant to replace flexbox! instead they work perfectly together. Need a 1D Layout? Use Flexbox. Nedd a 2D layout? Use grid.
 
+### Using fr and repeat
+
 ```css
 /* How Many columns: 4, what Size columns: 1fr */
 grid-template-columns: repeat(4, 1fr);
 
 /* How Many rows: 4, what Size rows: 1fr */
 grid-template-rows: repeat(2, 1fr);
+```
+
+### algining the content
+
+```css
+/* Aliging tracks inside containers distribute empty space */
+
+justify-content: center;
+align-content: center;
 ```

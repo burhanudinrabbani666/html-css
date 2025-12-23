@@ -1,4 +1,4 @@
-## Grid
+# Grid
 
 ```css
 .container--1 {
@@ -16,4 +16,19 @@
   column-gap: 10px;
   row-gap: 60px;
 }
+```
+
+## What is CSS Grid
+
+- Css grid s a set CSS properties for building 2-dimensional layouts
+- The main ides behind CSS Grid is that we devide a container element into rows and columns that can be filled with its child elements
+- in two dimensional contexts, CSS grid allows us to write less nested html and easier to rid css
+- css grid is not meant to replace flexbox! instead they work perfectly together. Need a 1D Layout? Use Flexbox. Nedd a 2D layout? Use grid.
+
+```css
+/* How Many columns: 4, what Size columns: 1fr */
+grid-template-columns: repeat(4, 1fr);
+
+/* How Many rows: 4, what Size rows: 1fr */
+grid-template-rows: repeat(2, 1fr);
 ```
